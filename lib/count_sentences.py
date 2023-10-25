@@ -25,7 +25,5 @@ class MyString:
     return True if "!" in self.value else False
 
   def count_sentences(self):
-    first = self.value.replace("!", ".")
-    second = first.replace("?", ".")
-    array_sentences = second.split(".")
-    return len([sentence for sentence in array_sentences if sentence])
+    sentence_array = self.value.replace("!", ".").replace("?", ".").split(".")
+    return len([sentence for sentence in sentence_array if sentence])
